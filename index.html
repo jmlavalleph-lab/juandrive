@@ -217,7 +217,7 @@ function draw(){const el=document.getElementById("cal");el.innerHTML="";document
 document.getElementById("prev").onclick=()=>{view.setMonth(view.getMonth()-1);draw()};document.getElementById("next").onclick=()=>{view.setMonth(view.getMonth()+1);draw()};
 
 /* DESTINATION DATABASE: Google Sheets -> Apps Script web app URL */
-const DESTINATION_API_URL = "PASTE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const DESTINATION_API_URL = "https://script.google.com/macros/s/AKfycbxVphCW7OJbQW_pcjreDrTgp3ovyo5XjwZ3Cbgm4ZC4mQc5lGcYEBGAj4BNg7T4emFmAQ/exec";
 let destinationRows = [];
 let selectedDestination = null;
 const destinationInput = document.getElementById("destination");
