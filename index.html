@@ -412,10 +412,13 @@ function updateDestinationQuote(){
     detail.textContent="For rentals of 7 days or more, please request a quotation.";
     return;
   }
-  const days=Number((document.getElementById("notes").value.match(/(?:^|\\D)([3-6])\\s*days?/i)||[])[1]||3);
-  const total=document.getElementById("duration").value==="3–6 days"?rate*days:rate;
-  price.textContent=money(total)+(document.getElementById("duration").value==="3–6 days"?" estimated total":"");
-  detail.textContent=`${destinationLabel(selectedDestination)} · ${selectedDestination.region} · ${selectedDestination.pricing_category} · ${document.getElementById("duration").value}${document.getElementById("duration").value==="3–6 days"?" (daily rate "+money(rate)+")":""}.`;
+  const duration = document.getElementById("duration").value;
+
+  price.textContent = duration === "3–6 days"
+    ? money(rate) + " / day"
+    : money(rate);
+
+  detail.textContent = `${destinationLabel(selectedDestination)} · ${selectedDestination.region} · ${selectedDestination.pricing_category} · ${duration}${duration === "3–6 days" ? " (daily rate only; final total depends on rental length)" : ""}.`;
 }
 async function loadDestinationDirectory(){
   const status=document.getElementById("destination-status");
