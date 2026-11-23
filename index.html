@@ -223,6 +223,114 @@ section[id]{scroll-margin-top:20px}
 @media(max-width:360px){.day{padding-inline:0}.day small{letter-spacing:-.3px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+
+/* RENTAL REQUIREMENTS AND HOW TO RENT */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.info-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #fff3d2;
+  font-size: 20px;
+}
+
+.info-card h3 {
+  color: var(--navy);
+  font-size: 15px;
+  margin: 2px 0 6px;
+}
+
+.info-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.info-note {
+  background: #f7f9fc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.process-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.process-card {
+  padding: 19px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.process-number {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--gold);
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.process-card h3 {
+  color: var(--navy);
+  font-size: 15px;
+  margin: 0 0 9px;
+}
+
+.process-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media(max-width:760px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media(max-width:480px) {
+  .process-list {
+    grid-template-columns: 1fr;
+  }
+}
 </style></head><body>
 <header><nav aria-label="Main navigation"><div class="nav-inner"><a class="logo" href="./" aria-label="Juan Drive Car Rental home"><img src="juan-drive-logo.png" alt="Juan Drive Car Rental" width="1066" height="247"></a><button class="nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation menu"><svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><svg class="close-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><div class="nav-links" id="nav-links"><a href="#rates">Rates</a><a href="#calendar">Availability</a><a class="nav-book" href="#request">Book Now</a></div></div></nav>
 <div class="hero"><div><div class="eyebrow">Self-drive car rental · Santa Rosa, Laguna</div><h1>Your Ride.<br><span style="color:#f3cf70">Your Time.</span></h1>
@@ -296,6 +404,130 @@ section[id]{scroll-margin-top:20px}
 
 </section>
 <div class="features"><div><b>5-Seater Sedan</b>Comfortable for solo, family, or barkada trips</div><div><b>Fuel-Efficient</b>Save more on your journeys</div><div><b>Automatic Transmission</b>Smooth and easy driving experience</div><div><b>Convenient Pickup</b>Pickup in Santa Rosa, Laguna; delivery by arrangement</div></div>
+
+</div></div>
+
+<!-- 05. RENTAL REQUIREMENTS -->
+<section class="panel" id="requirements">
+
+  <h2>Rental Requirements</h2>
+  <p class="sub">
+    Prepare the following documents to help us verify your identity
+    and complete your rental booking.
+  </p>
+
+  <div class="info-grid">
+
+    <div class="info-card">
+      <div class="info-icon">🪪</div>
+      <div>
+        <h3>Driver's License</h3>
+        <p>Present a valid and unexpired driver's license for verification.</p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">📱</div>
+      <div>
+        <h3>LTMS Portal QR Code</h3>
+        <p>Provide your LTMS Portal QR code for driver's license verification.</p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">🪪</div>
+      <div>
+        <h3>Valid Government-Issued ID</h3>
+        <p>Provide one additional valid ID for identity verification.</p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">📄</div>
+      <div>
+        <h3>Billing Details</h3>
+        <p>Provide your billing information and proof of billing, if requested.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="info-note">
+    <strong>Please Note:</strong>
+    All submitted documents must be valid and readable.
+    Additional information may be requested when necessary
+    to complete booking verification.
+  </div>
+
+</section>
+<!-- END RENTAL REQUIREMENTS -->
+
+<!-- 06. HOW TO RENT -->
+<section class="panel" id="how-to-rent">
+
+  <h2>How to Rent with Juan Drive</h2>
+  <p class="sub">
+    Your journey starts with four simple steps!
+    Booking your ride has never been easier.
+  </p>
+
+  <div class="process-list">
+
+    <div class="process-card">
+      <div class="process-number">01</div>
+      <h3>Choose Your Rental Details</h3>
+      <p>
+        Select your preferred pickup date, rental duration,
+        destination, and pickup arrangement through our
+        online booking form.
+      </p>
+    </div>
+
+    <div class="process-card">
+      <div class="process-number">02</div>
+      <h3>Submit Your Booking Request</h3>
+      <p>
+        Send your booking details through WhatsApp.
+        Our team will review your request and check
+        vehicle availability.
+      </p>
+    </div>
+
+    <div class="process-card">
+      <div class="process-number">03</div>
+      <h3>Complete the Requirements</h3>
+      <p>
+        Prepare and submit your driver's license,
+        LTMS Portal QR code, valid ID, and billing
+        details for verification.
+      </p>
+    </div>
+
+    <div class="process-card">
+      <div class="process-number">04</div>
+      <h3>Confirm and Enjoy Your Ride!</h3>
+      <p>
+        Once approved, complete the agreed payment
+        and security deposit arrangements. Coordinate
+        your pickup and enjoy your trip!
+      </p>
+    </div>
+
+  </div>
+
+  <div class="info-note">
+    <strong>Booking Reminder:</strong>
+    Submitting a booking request does not automatically
+    reserve the vehicle. Your booking is confirmed only
+    after availability, requirements, and payment
+    arrangements have been verified by Juan Drive.
+  </div>
+
+</section>
+<!-- END HOW TO RENT -->
+
+<section class="panel" id="request">
+
 <section class="panel" id="request"><h2>Book Your Ride</h2><p class="sub">Fill out the form and we'll get in touch to confirm your booking.</p>
 <form id="form"><div class="form"><div class="field"><label for="name">Full name *</label><input id="name" autocomplete="name" required placeholder="Enter your full name"></div><div class="field"><label for="phone">Contact number *</label><input id="phone" type="tel" autocomplete="tel" required placeholder="09XXXXXXXXX"></div><div class="field"><label for="date">Preferred pickup date *</label><input id="date" type="date" required></div><div class="field"><label for="duration">Rental duration *</label><select id="duration"><option>12 hours</option><option>24 hours</option><option>3–6 days</option><option>7 days or more</option></select></div><div class="field" id="rental-days-field" style="display:none"><label for="rental-days">Number of rental days</label><select id="rental-days"><option>3</option><option>4</option><option>5</option><option>6</option></select></div><div class="field"><label for="destination">Destination *</label><input id="destination" list="destination-options" required autocomplete="off" placeholder="Search city / municipality"><datalist id="destination-options"></datalist><small id="destination-status" class="fine">Loading destination directory…</small></div><div class="field"><label for="pickup">Pickup arrangement</label><select id="pickup"><option>Pick up in Santa Rosa</option><option>Request delivery</option><option>Motorcycle parking needed</option></select></div><div class="field full"><label for="notes">Additional details</label><textarea id="notes" placeholder="Preferred pickup time or questions"></textarea></div></div>
 <div class="field full" id="destination-quote" style="background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:14px">
