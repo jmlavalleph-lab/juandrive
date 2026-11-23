@@ -30,6 +30,105 @@ h2{color:var(--navy);margin:0;font-size:24px}.sub{color:var(--muted);font-size:1
 .day.available{background:#f0faf4;border-color:#b8e3ca}.day.available small{color:#16834d}.day.booked{background:#fff2f1;border-color:#f0c5c1}.day.booked small{color:#c34343}.day.pending{background:#fff9e9;border-color:#f0dfa9}.day.pending small{color:#98710f}.day.selected{outline:3px solid var(--gold)}
 .note,.fine{font-size:12px;color:var(--muted);background:#f7f9fc;padding:12px;border-radius:9px;line-height:1.5;margin-top:14px}
 .rates{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rate{border:1px solid var(--line);border-radius:12px;padding:17px}.rate h3{color:var(--navy);margin:0 0 6px}.rate p{font-size:13px;color:var(--muted);line-height:1.5}.price{font-size:24px;font-weight:900;color:var(--blue);margin:12px 0}
+
+/* Long-Term Rental Promo Section */
+.longterm {
+  border: 1px solid #ead9a8;
+  background: linear-gradient(135deg, #fffdf7, #ffffff);
+}
+
+.longterm-badge {
+  display: inline-block;
+  background: #fff3d2;
+  color: #8a5b00;
+  border: 1px solid #f0d99f;
+  border-radius: 30px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.longterm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.longterm-rate {
+  border: 1px solid #eadfca;
+  border-radius: 12px;
+  padding: 16px;
+  background: white;
+}
+
+.longterm-rate strong {
+  display: block;
+  color: var(--navy);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.longterm-price {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.longterm-rate small {
+  display: block;
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.longterm-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.longterm-benefit {
+  background: var(--navy);
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.longterm-benefit b {
+  display: block;
+  color: var(--gold);
+  margin-bottom: 5px;
+}
+
+.longterm-note {
+  background: #f7f9fc;
+  padding: 13px;
+  border-radius: 9px;
+  margin-top: 15px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media(max-width:760px) {
+  .longterm-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:480px) {
+  .longterm-grid,
+  .longterm-benefits {
+    grid-template-columns: 1fr;
+  }
+}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field label{display:block;font-size:12px;font-weight:bold;color:#526176;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #dce3ec;border-radius:8px;font:inherit}.field textarea{min-height:75px}.full{grid-column:1/-1}
 .submit{width:100%;margin-top:15px;padding:15px;border:0;border-radius:9px;background:var(--navy);color:white;font-weight:bold;cursor:pointer}
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;background:var(--navy);color:white;border-radius:14px;padding:22px;margin-bottom:22px}.features b{display:block;color:var(--gold);margin-bottom:6px}.features div{font-size:13px;line-height:1.4}
@@ -139,6 +238,64 @@ section[id]{scroll-margin-top:20px}
 <div class="rate"><h3>Regional Getaways</h3><p>Nearby provinces and selected destinations</p><div class="price">₱1,700 <small>/ 12 hrs</small></div><p>24 hours: <b>₱1,900</b><br>3–6 days: <b>₱1,800/day</b></p></div>
 <div class="rate"><h3>Extended Journeys</h3><p>Longer-distance Luzon destinations</p><div class="price">₱2,200 <small>/ 12 hrs</small></div><p>24 hours: <b>₱2,500</b><br>3–6 days: <b>₱2,300/day</b></p></div></div>
 <p class="fine">Guide prices only. Final rates may vary based on exact destination, rental duration, and delivery arrangements. Fuel, tolls, parking, and other trip expenses are separate unless agreed otherwise. Please request a final quotation before booking.</p></section>
+
+<section class="panel longterm" id="long-term-rates">
+
+  <span class="longterm-badge">Special Promo · Long-Term Rental</span>
+
+  <h2>Promo Rates for Long-Term Rent</h2>
+  <p class="sub">Stay longer and enjoy better daily rates with Juan Drive!</p>
+
+  <div class="longterm-grid">
+
+    <div class="longterm-rate">
+      <strong>7 DAYS (1 WEEK)</strong>
+      <div class="longterm-price">₱2,000/day</div>
+      <small>Total: ₱14,000</small>
+    </div>
+
+    <div class="longterm-rate">
+      <strong>14 DAYS (2 WEEKS)</strong>
+      <div class="longterm-price">₱1,950/day</div>
+      <small>Total: ₱27,300</small>
+    </div>
+
+    <div class="longterm-rate">
+      <strong>21 DAYS (3 WEEKS)</strong>
+      <div class="longterm-price">₱1,850/day</div>
+      <small>Total: ₱38,850</small>
+    </div>
+
+    <div class="longterm-rate">
+      <strong>25 DAYS AND UP</strong>
+      <div class="longterm-price">₱1,650/day</div>
+      <small>30 days: ₱49,500</small>
+    </div>
+
+  </div>
+
+  <div class="longterm-benefits">
+
+    <div class="longterm-benefit">
+      <b>📍 DRIVE ANYWHERE IN LUZON</b>
+      Enjoy your trips across Luzon, subject to destination approval and rental terms.
+    </div>
+
+    <div class="longterm-benefit">
+      <b>✨ FREE CARWASH</b>
+      Enjoy one complimentary carwash with your long-term rental.
+    </div>
+
+  </div>
+
+  <div class="longterm-note">
+    <b>Long-Term Rental Conditions:</b>
+    Includes up to 100 km per rental day (3,000 km for 30 days).
+    Additional mileage is ₱5/km. Fuel, tolls, parking, and delivery/pickup fees are separate.
+    Final quotation and destination approval are required before booking.
+  </div>
+
+</section>
 <div class="features"><div><b>5-Seater Sedan</b>Comfortable for solo, family, or barkada trips</div><div><b>Fuel-Efficient</b>Save more on your journeys</div><div><b>Automatic Transmission</b>Smooth and easy driving experience</div><div><b>Convenient Pickup</b>Pickup in Santa Rosa, Laguna; delivery by arrangement</div></div>
 <section class="panel" id="request"><h2>Book Your Ride</h2><p class="sub">Fill out the form and we'll get in touch to confirm your booking.</p>
 <form id="form"><div class="form"><div class="field"><label for="name">Full name *</label><input id="name" autocomplete="name" required placeholder="Enter your full name"></div><div class="field"><label for="phone">Contact number *</label><input id="phone" type="tel" autocomplete="tel" required placeholder="09XXXXXXXXX"></div><div class="field"><label for="date">Preferred pickup date *</label><input id="date" type="date" required></div><div class="field"><label for="duration">Rental duration *</label><select id="duration"><option>12 hours</option><option>24 hours</option><option>3–6 days</option><option>7 days or more</option></select></div><div class="field" id="rental-days-field" style="display:none"><label for="rental-days">Number of rental days</label><select id="rental-days"><option>3</option><option>4</option><option>5</option><option>6</option></select></div><div class="field"><label for="destination">Destination *</label><input id="destination" list="destination-options" required autocomplete="off" placeholder="Search city / municipality"><datalist id="destination-options"></datalist><small id="destination-status" class="fine">Loading destination directory…</small></div><div class="field"><label for="pickup">Pickup arrangement</label><select id="pickup"><option>Pick up in Santa Rosa</option><option>Request delivery</option><option>Motorcycle parking needed</option></select></div><div class="field full"><label for="notes">Additional details</label><textarea id="notes" placeholder="Preferred pickup time or questions"></textarea></div></div>
